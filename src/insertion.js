@@ -1,5 +1,6 @@
-export default (input: readonly number[]): number[] => {
+export default (input) => {
   const items = [...input];
+
   for (let i = 0; i < items.length; i++) {
     const element = items[i];
 

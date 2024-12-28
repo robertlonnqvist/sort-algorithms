@@ -1,10 +1,10 @@
-function* generator(): IterableIterator<number> {
+function* generator() {
   while (true) {
     yield Math.floor(Math.random() * 999) - Math.floor(Math.random() * 999);
   }
 }
 
-export default (length: number): number[] => {
+export default (length) => {
   const g = generator();
   const items = [];
   while (items.length < length) {

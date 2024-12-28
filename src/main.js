@@ -1,9 +1,9 @@
-import bubble from "./bubble";
-import insertion from "./insertion";
-import merge from "./merge";
-import quick from "./quick";
-import random from "./random";
-import selection from "./selection";
+import bubble from "./bubble.js";
+import insertion from "./insertion.js";
+import merge from "./merge.js";
+import quick from "./quick.js";
+import random from "./random.js";
+import selection from "./selection.js";
 
 const items = random(process.argv.length > 2 ? +process.argv[2] : 10);
 

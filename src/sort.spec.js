@@ -1,10 +1,7 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
 
-export default (
-  name: string,
-  sorter: (n: readonly number[]) => number[],
-): void => {
+export default (name, sorter) => {
   describe(`${name} sort`, () => {
     it("should sort even array", () => {
       expect(sorter([3, 1, 4, 2])).to.eql([1, 2, 3, 4]);
@@ -27,9 +24,7 @@ export default (
     });
 
     it("should sort array with duplicate numbers", () => {
-      expect(sorter([3, 1, 1_000_000, 5, 100])).to.eql([
-        1, 3, 5, 100, 1_000_000,
-      ]);
+      expect(sorter([3, 1, 1000000, 5, 100])).to.eql([1, 3, 5, 100, 1000000]);
     });
 
     it("should sort random array", () => {

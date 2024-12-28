@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import random from "./random";
+import random from "./random.js";
 
 describe("Random list generator", () => {
   it("should generate list", () => {

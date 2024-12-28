@@ -1,4 +1,4 @@
-export default (input: readonly number[]): number[] => {
+export default (input) => {
   const items = [...input];
   for (let j = 0; j < items.length; j++) {
     for (let i = 0; i < items.length - 1 - j; i++) {

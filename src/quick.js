@@ -1,4 +1,4 @@
-const partition = (items: number[], left: number, right: number): number => {
+const partition = (items, left, right) => {
   const pivot = items[Math.floor((left + right) / 2)];
   let i = left;
   let j = right;
@@ -19,11 +19,7 @@ const partition = (items: number[], left: number, right: number): number => {
   return i;
 };
 
-const quick = (
-  items: number[],
-  left = 0,
-  right = items.length - 1,
-): number[] => {
+const quick = (items, left = 0, right = items.length - 1) => {
   if (items.length > 1) {
     const index = partition(items, left, right);
     if (left < index - 1) {
@@ -36,4 +32,4 @@ const quick = (
   return items;
 };
 
-export default (items: readonly number[]): number[] => quick([...items]);
+export default (items) => quick([...items]);

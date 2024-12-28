@@ -1,8 +1,5 @@
-const _merge = (
-  left: readonly number[],
-  right: readonly number[],
-): number[] => {
-  const result: number[] = [];
+const _merge = (left, right) => {
+  const result = [];
 
   let rightIndex = 0;
   let leftIndex = 0;
@@ -18,7 +15,7 @@ const _merge = (
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 };
 
-const merge = (input: readonly number[]): number[] => {
+const merge = (input) => {
   const items = [...input];
   if (items.length < 2) {
     return items;
