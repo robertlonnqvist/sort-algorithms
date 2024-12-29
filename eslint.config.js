@@ -1,6 +1,6 @@
 import globals from "globals";
 import js from "@eslint/js";
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
@@ -11,5 +11,5 @@ export default [
     },
   },
   js.configs.recommended,
-  eslintPluginPrettierRecommended,
+  eslintConfigPrettier,
 ];
